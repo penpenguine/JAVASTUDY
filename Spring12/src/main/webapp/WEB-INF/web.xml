@@ -10,15 +10,7 @@
 	<!-- SpringMVC 에서의 Front Controller(단일인입점) 선언
            :: servlet-name 을  action 로 정의 하면 ...
            :: Meta-Data 는 default 로 action-servlet.xml 이 됨... -->
-    <listener>
-    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-    
-    <context-param>
-    	<param-name>contextConfigLocation</param-name>
-    	<param-value>classpath:config/commonservice.xml</param-value>
-    </context-param>
-    
+
     <filter>
     	<filter-name>encodingFilter</filter-name>
     	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -48,7 +40,7 @@
 	<!-- 확장자가 ~.do 경우 action servlet-name 으로 선언적이름을 갖는 Servlet 처리 -->
     <servlet-mapping>
         <servlet-name>action</servlet-name>
-        <url-pattern>/app/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     
 </web-app>
