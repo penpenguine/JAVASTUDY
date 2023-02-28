@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
@@ -57,6 +58,7 @@ public class JSONObjectMapperTestApp {
 		System.out.println();
 		
 		System.out.println("2 JSON Value => JSONObject 사용 및 값 추출");
+		JSONArray jsonArray = (JSONArray)JSONValue.parse(jsonManyValue);
 		System.out.println(jsonArray);
 		System.out.println((JSONObject)jsonArray.get(0));
 		System.out.println("userId : " + ((JSONObject)jsonArray.get(0)).get("userId"));
@@ -67,7 +69,9 @@ public class JSONObjectMapperTestApp {
 		map.put("1",user);
 		map.put("2",new User("user02","홍길동","2222",null,20));
 		
-		System.out.println("3,");
+		System.out.println("3,Map<User> => JSON value(String)로 변환");
+		jsonManyValue = objectMapper.writeValueAsString(map);
+		
 			
 	}
 }

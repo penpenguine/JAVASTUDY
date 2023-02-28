@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+
+	<script src="../javascript/jquery-2.1.4.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		
+		/*
+		■ tag Selector (선택자) 를 이용 다양한 사용법을 확인한다.
+	 	  - element Selector  :  $( ' element [ , element ] ' )
+	 	  - 자손 element selector  : $('element  [자손element] [ ,element  [자손element] ]')
+	 	  - 속성 element selector  : $('element[attr | attr=value]  [ , element[attr | attr=value]  ]')
+	 	  
+	 	  - 연산자종류 : = 이외의 연산자는 활용도 낮음 
+				att = value : value 같은
+				att != value : value 같지않은
+				att ^= value : value 시작하는
+				att $= value : value 끝나는
+				att *= value : value 포함하는
+		*/
+		
+		$(document).ready( function(){
+			
+			//==> 아래의 각각를 주석처리하며 실행 의미 이해
+			//$('form').css('color', 'red');
+			//$('form[name]').css('color', 'red');
+			
+			/////////////////////////////////////////////////////////////////////////////////////////
+			//==> HINT : Array
+			//==> 해당하는 Object 가 여러개일 경우 Array 생성
+			//$('form[name]')[0].css('color', 'red');
+			//$(  $('form[name]')[1]  ).css('color', 'red');
+			////////////////////////////////////////////////////////////////////////////////////////
+			
+			//$('form[name="test01"]').css('color', 'red');
+			//$('form p').css('color', 'red');
+			//$('form[name="test01"] p').css('color', 'red');
+			//$('form[name="test01"] p , form[name="test02"] span').css('color', 'red');
+			
+		});
+	
+	</script>
+</head>
+
+<body>
+
+	<h1>javascript Framework : jQuery 학습</h1>
+	<h2>사용법(?)에 익숙해 지자 </h2>
+		
+	<form name="test01">
+		<p>jQuery 란 ? </p>
+	</form>
+	
+	<div>
+		<p> javascript Framework</p>
+	</div>
+	
+	<form name="test02">
+		<p>Framework 이란 ?
+			<span> 확장,재사용 가능한 Lib</span>
+		</p>
+	</form>
+
+</body>
+
+</html>
