@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+<head>
+	<meta charset="EUC-KR">
+	
+    <style>
+        body {
+            background-color: gray;
+            width: 960px;
+            margin: auto;  /* ??? */
+            border: 3px solid white;
+        }
+        
+        #header {
+            background-color: red;
+        }
+        
+         #navigation {
+            background-color: orange;
+        }
+         #wrap { 
+            /* 방법 1 */
+         	/* 영역을 벋어나는 부분은 보이지않게함 */
+         	overflow: hidden;
+        	background-color: blue;
+        }
+        
+        #aside {
+        	width: 200px;
+           	float: left;
+            background-color: green;
+        }
+    
+        #section {
+        	width: 760px;
+           	float: left;
+            background-color: purple;
+        }
+        
+        #footer{
+            background-color: yellow;
+            /*방법 2*/
+             /*Tag 의 어느쪽 방향이 이전 맞닿기 않게 할 지 결정*/
+            /* clear: both; */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+    	<h1>Header</h1>
+    </div>
+
+
+    <div id="navigation">
+    	<h1>Navigation</h1>
+    </div>
+
+
+    <div id="wrap">
+    
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>CSS 연습. Layout 구성</p>
+        </div>
+    
+        <div id="section">
+            <h1>Section</h1>
+            <p>CSS 연습. Layout 구성</p>
+            <p>CSS 연습. Layout 구성</p>
+            <p>CSS 연습. Layout 구성</p>
+            <p>CSS 연습. Layout 구성</p>
+            <p>CSS 연습. Layout 구성</p>
+            <p>CSS 연습. Layout 구성</p>
+        </div>
+    
+    </div>
+
+
+    <div id="footer">
+    	<h1>Footer</h1>
+    </div>
+
+</body>
+	
+</html>

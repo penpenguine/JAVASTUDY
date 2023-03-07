@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="EUC-KR">
+
+	<style type="text/css">		
+		/*
+		■ tag Selector (선택자) 를 이용 다양한 사용법을 확인한다.
+	 	  - Tag Selector  :   Tag [ , Tag ] 
+	 	  - 자손 Tag selector  : Tag  [자손Tag] [ ,Tag  [자손Tag] ]
+	 	  - 속성 Tag selector  : Tag[attr | attr=value]  [ , Tag[attr | attr=value]  ]
+ 	      - 상태 selector(:사용한경우)	: Tag:expresion
+ 	  				input:disabled
+ 	  				input:enabled
+ 	  				input:focus
+ 	  				input:checked
+ 	  		- 구조 선택자 selector(:사용한경우)	: Tag:expresion
+ 	  				input:first-child
+ 	  				input:last-child
+ 	  				input:nth-child(n)
+ 	  				input:nth-last-child(n)
+ 	  		- 반응 선택자 selector(:사용한경우)	: Tag:expresion
+ 	  				input:active  ==> click 일 경우
+ 	  				input:hover  ==> 마우스를 올릴경우
+ 	  	*/
+ 	  	
+		/*
+			==> 아래의 각각를 c &p 실행 의미 이해 
+			
+			form:first-child { background-color: red; }
+			
+			form:last-child{ background-color: red; }
+			
+			Tag:nth-chid(index)	
+	 	    ==> parent element 기준(?)으로....
+	 	    ==> index 는 1부터 [주의,주의,주의,주의.....]
+	 	    ==> n 은 0 부터 [주의,주의,주의,주의.....]
+			
+			form:nth-child(n){ background-color: red; }
+			
+			form:nth-child(2n){ background-color: red; }
+			
+			form:nth-child(2n+1){ background-color: red; }
+			
+			form[name]:active { background-color: red; }
+			
+			form:hover { background-color: red; }
+		*/
+		
+			form[name]:active { background-color: red; }
+
+
+	
+	</style>
+</head>
+
+<body>
+
+	<form method='post' name="myForm">
+	
+		이름<input type='text' name='name' value='이름입력'><br>
+		주소<input type='text' name='addr' ><br><p>
+
+		사용중인 소프트웨어 선택<br>
+		<input type='checkbox' name='sw' value='hwp' checked="checked">hwp<br>
+		<input type='checkbox' name='sw' value='MS/WORD' checked="checked">MS/WORD<br>
+		<input type='checkbox' name='sw' value='EXCEL'>EXCEL<br><p>
+
+		사용중인 OS 선택<br>
+		<input type='radio' name='os' value='win2000' checked="checked">win2000<br>
+		<input type='radio' name='os' value='linux'>리눅스<br><p>
+
+		사용중인 CPU 선택<br>
+		<input type='radio' name='cpu' value='i3'>i3<br>
+		<input type='radio' name='cpu' value='i5'>i5<br>
+		<input type='radio' name='cpu' value='i7' checked="checked">i7<br>
+
+		<input type="button"  value='button전송'>
+		<input type="submit" value="submit전송">
+		<input type='reset' value='취소'>
+	
+	</form>
+	
+		
+	<form>
+		<p>두번째 Form</p>
+	</form>
+	
+	<form>
+		<p>세번째 Form</p>
+	</form>
+	
+	<form>
+		<p>네번째 Form</p>
+	</form>
+	
+</body>
+
+</html>

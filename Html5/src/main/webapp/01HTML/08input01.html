@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>08input01.html</title>
+	</head>
+	
+	<body>
+	
+	<!-- Data 보내기 Button 를 Click 후 URL 확인  
+	      - Attribute  action , method 확인 : 추후 Server 구현시 다시 언급 -->
+	<form action="http://127.0.0.1:8080/Html5/abc.do" method="get">
+		
+		이름 1 : <input type="text"  name="name01"  value="홍길동" /><br />
+		이름 2 : <input type="text" name="name02"  /><br />
+		<label  for="name3">이름 3 :</label>
+		<input type="text" id="name3" name="name03"  /><br />
+		<!-- label Tag 사용 / 미사용의 차이점 : 이름 3 을 Click 해보면.... -->
+		      
+		<hr/>
+		      
+		취미는 ? <br>
+		<!-- Attribute checked="checked" : XHTML5 Notation -->
+		독서		<input type="checkbox" name="reading" value="reading" checked="checked"/>
+		<!-- Attribute checked="checked" : HTML5 Notation -->
+		야구		<input type="checkbox" name="baseball" value="baseball" checked />
+		축구		<input type="checkbox" name="footbal" value="football" /><br>
+		
+		<!--  시작Tag 와 종료Tag 를 같이 기술 Noation
+				: XHTML Notation  <hr/>  /  HTML5 Notation <hr> 				 -->
+		<hr>
+		
+		성별 ? <br>
+		남자		<input type="radio" name="sex" value="male" checked />
+		여자		<input type="radio" name="sex" value="female" /><br>
+		    
+		 <hr/>
+		 
+		사진 : <input type="file" name="picture" /><br />
+		화면에는 안보임 : <input type="hidden" name="hideData" value="숨긴Data"/><br />
+		
+		<hr/>
+		
+		비밀번호01 : <input type="password" name="password01" value="1234" /><br />
+		비밀번호02 : <input type="password" name="password02" /><br />
+		 
+		 <hr/>
+		    
+		<input type="reset" value="다시쓰기"/><br />
+		<input type="submit" value="Data 보내기"/><br />
+		<input type="button" value="그냥 button" />
+	      
+	</form>
+	
+	<hr size="5" color="red"/>
+	
+	<h3>위의 input Tag 는 HTML4에서 지원 / 아래는 HTML5에서 추가지원 하는 type </h3>
+	
+	<hr size="5" color="red"/>
+	
+	input type="color" : <input type="color" /><br />
+	input type="date" : <input type="date" /><br />
+	input type="datetime" : <input type="datetime" /><br />
+	input type="datetime-local" : <input type="datetime-local" /><br />
+	input type="email" : <input type="email" /><br />
+	input type="month" : <input type="month" /><br />
+	input type="number" : <input type="number" /><br />
+	input type="range" : <input type="range" /><br />
+	input type="search" : <input type="search" /><br />
+	input type="tel" : <input type="tel" /><br />
+	input type="time" : <input type="time" /><br />
+	input type="url" : <input type="url" /><br />
+	input type="week" : <input type="week" /><br />
+	
+	<h3>
+		Browser 지원 유무는 확인필요<br/>
+		W3C는 HTML 표준만 제정 강제하지 않으며, 이로인한 웹브라우저 전쟁(?) 이 시작 됨 
+	</h3>
+	
+	</body>
+	
+</html>

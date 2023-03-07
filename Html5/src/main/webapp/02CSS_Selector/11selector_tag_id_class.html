@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="EUC-KR">
+
+	<style type="text/css">
+		
+		/* ////////////////////////////////////////////////////////////////////////////////////////////////////
+		■ Tag Selector(선택자) 를 이용 다양한 사용법을 확인.
+	 	  - Tag Selector  :  Tag [ , Tag ]
+	 	  - 후손 Tag Selector 시  : Tag  [후손Tag] [ ,Tag  [후손Tag] ]
+	 	  - 자손 Tag Selector 시  : Tag > [자손Tag] [ ,Tag>  [자손Tag] ]
+		
+		  자손 : 직계, 1촌(?)  /  후손 : 1촌 포함 모든촌수(?)
+		//////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+		/* ==> 아래의 각각를 c &p 실행 의미 이해 
+			
+			==> body  * : 모든 후손  /  body > * : 모든자손  ==> 차이점 확인
+			 body  * { color: red; }
+			 body >  * { color: red;  }
+			 
+			==> body h1 : 모든 후손  /  body > h1 : 모든자손  ==> 차이점 확인
+			 body h1 { color: red; }
+			 body > h1 { color: red; }
+			
+			==> body h2 : 모든 후손  /  body > h2 : 모든자손  ==> 차이점 확인
+			 body h2 { color: red; } 
+			 body > h2 { color: red; } 
+
+			
+			 form { color: red; } 
+			 
+			 form p { color: red; } 
+			 
+			 form span { color: red; } 
+			
+			 body h1 , form p { color: red; } 
+			 
+			 body h1 , form span { color: red; } 
+		*/
+
+		/* ////////////////////////////////////////////////////////////////////////////////////////////////////
+		■ class Selector : class attribute 접근 :  .className {  ~~  }
+		■ id Selector : id attribute 접근 :  #uniqueId{~~}
+		//////////////////////////////////////////////////////////////////////////////////////////////////// */
+		
+		/* ==> 아래의 각각를 c &p 실행 의미 이해 
+		
+			#firstForm { color: red; } 
+		
+			.abc { color: red; }
+			
+			.def { color: red; }
+			
+			//==> 두 style sheet 를 같이...
+			.abc { color: red; }
+			.def {  background-color: gray; }
+			
+			//==> Tag selector 와 class Selector 같이 사용가능
+			form.abc { color: red; }
+			
+			form.def { color: red; }
+			
+			form.abc.def{ color: red; }
+		*/
+			
+			
+			form.def { color: red; }
+		
+	
+	</style>
+</head>
+
+<body>
+
+	<h1>CSS 학습</h1>
+	<h2>사용법(?)에 익숙해 지자 </h2>
+	
+	<hr/>
+		
+	<form id="firstForm" class="abc" name="test01">
+		<p><h1>CSS 란 ?</h1></p>
+	</form>
+	
+	<hr/>
+	
+	<div>
+		<p><h2>Cascading Style Sheets</h2></p>
+	</div>
+	
+	<hr/>
+	
+	<form id="secondForm" class="def">
+		<p>Style Sheets ?
+			<span> 웹 문서의 전반적인 스타일을 미리 저장해 둔 스타일시트</span>
+		</p>
+	</form>
+	
+	<hr/>
+	
+	<!-- CSV 로 class 는 여러개를 사용할 가능 -->
+	<form id="thirdForm" class="abc def" name="test03">
+		<p>용어정리</p>
+		<div>Style Sheet : style Tag 내에 입력된 코드</div>
+		<div>CSS Block : selector { ~~~ } </div>
+	</form>
+
+</body>
+
+</html>

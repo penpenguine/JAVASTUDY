@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>07img.html</title>
+	</head>
+	
+	<body>
+	
+		<img src="./Forest Flowers.jpg" width="300" height="300"/><br/>
+		<img src="./Forest Flowers.jpg" /><br/>
+		<img src="./Humpback Whale.jpg" width="200" /><br/>
+		<img src="./Humpback Whale.jpg" /><br/>
+		<img src="./NoImage" alt="이미지없음, 추후 이미지  추가예정" width="200" height="200"/><br/>
+		
+		<!--  - 웹 페이지 작성시 이미지를 추후에 넣을 경우. 
+		        - 이미지가 미확정일 경우 원하는 크기의 이미지를 제공 : placehold.it 사이트-->
+		<img src="http://placehold.it/300X300" /><br/>
+		<img src="http://placehold.it/350x150" />
+		<img src="http://placehold.it/200X150" />
+		<img src="http://placehold.it/100X100" />
+		
+		<hr/>
+		
+		<h3><ins>anchor Tag + img Tag 사용</ins></h3>
+		<a href="http://www.daum.net">
+			<img src="http://search1.daumcdn.net/search/statics/common/img/p/daumlogo_140516.gif">
+		</a>image Click 해 보면....
+		
+		<hr/>
+		
+		<h3><ins>anchor Tag + img Tag + table 사용</ins></h3>
+	
+		<table>
+		
+			<tr align=center>
+				<td>no</td>
+				<td>site name</td>
+				<td>remark</td>
+			</tr>
+			
+			<tr >
+				<td>1</td>
+				<td><a href="http://www.daum.net">다음</a></td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr >
+				<td>2</td>
+				<td>
+					<a href="http://www.daum.net">
+						<img src="http://search1.daumcdn.net/search/statics/common/img/p/daumlogo_140516.gif">
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr >
+				<td>3</td>
+				<td>
+					<!-- Attribute href  필수 : 웹표준을 지키며 이동않을 시 # 이용 : 빈 링크   -->
+					<a href="#">
+						<!-- 이미지가 미확정 -->
+						<img src="http://placehold.it/50X50" />
+					</a>
+				</td>
+				<td>회사 이미지 미정</td>
+			</tr>
+			
+		</table>
+	
+	</body>
+	
+</html>
