@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Player Sample</title>
+
+    <script type="text/javascript" src="https://kr.object.ncloudstorage.com/otaniplayer/ncplayer-1.3.0.umd.min-c2a0b01f.js"></script>
+  </head>
+
+  <body>
+
+    <div style="text-align:center">
+      <div id="divVideoPlayer" name="divVideoPlayer"></div>
+    </div>
+
+     <script>
+
+      var player = new ncplayer('divVideoPlayer', {
+        controls: true,
+        autostart: false,
+        mute: true,
+        width: 1024,
+        playlist: [
+        {
+        	file:"https://zzyztajrxqkv16588401.cdn.ntruss.com/hls/HeHY7~xAawoMlgDIIhEY6iUbR2~oQjKzqOg9Xgnaa5k_/otani/otani/2023-03-22%2011-43-39-710_AVC_HD_1Pass_30fps.mp4/index.m3u8",
+	        poster:"https://kr.object.ncloudstorage.com/vod.station.thumbnail/otani/2023-03-22%2011-43-39-710_01.jpg"	
+        }
+        ],
+      });
+	  player.autostart(true);
+      
+      
+
+     </script>
+
+   </body>
+</html>
